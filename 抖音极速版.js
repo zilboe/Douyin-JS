@@ -18,14 +18,14 @@ while(true)
 {
     for(i=1;i<10;i++)
     {
+        var 随机偏移x=random(20,60);
         console.clear();
-        var x=random(6000,7800);
+        var x=random(5000,6500);
         console.log("开始第" + 视频数量 + "个视频");
-        swipe(730,1700,730,300,800);
+        swipe(800,1650,800-随机偏移x,300,350);//无偏移图片过不去
         if(红包出现.exists()) {
             console.info("出现红包");
             click(x1 / 2 , y / 2);
-            sleep(300);
             console.info("已经领取");
             var 关闭按钮=id("iv_close").findOne(100);
             if(关闭按钮!=null){
@@ -35,7 +35,7 @@ while(true)
                 click(530,1930);
             }
         }
-        console.log("随机播放" + x/1000 + "秒");
+        console.log("随机播放" + (x+2500)/1000 + "秒");
         sleep(x);
         视频数量++;
     }

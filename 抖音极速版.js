@@ -9,7 +9,7 @@ function console_启动(){
     console.setSize((x1 / 2)-20 , (y / 4)-50);
 }
 
-sleep(random(2000,3000));//启动时间，可以先手动打开，再运行程序
+sleep(random(2000,3000));//启动时间，等待程序加载
 console_启动();
 console.log("抖音极速版启动成功");
 var i;
@@ -37,8 +37,7 @@ threads.start(function(){
     sleep(600);
     }
 } )
-while(true)
-{
+function 刷频(){
     for(i=1;i<10;i++)
     {
         var 随机偏移x=random(20,60);
@@ -51,4 +50,8 @@ while(true)
         视频数量++;
     }
     i=1;
+}
+while(true)
+{
+    刷频();
 }
